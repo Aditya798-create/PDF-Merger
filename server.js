@@ -26,4 +26,10 @@ app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`)
 })
 
-.listen(process.env.PORT || 5000)
+var server = http.createServer((req, res) => {
+  //your stuff
+});
+
+server.listen(process.env.PORT || 80, () => {
+  console.log("Listening on port 80");
+});
